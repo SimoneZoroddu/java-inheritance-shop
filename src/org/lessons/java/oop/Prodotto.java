@@ -1,17 +1,19 @@
 package org.lessons.java.oop;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class Prodotto {
-    
+
     protected int codice;
     protected String nome;
     protected String marca;
     protected BigDecimal prezzo;
     protected BigDecimal iva;
 
-    public Prodotto(int codice, String nome, String marca, BigDecimal prezzo, BigDecimal iva) {
-        this.codice = codice;
+    public Prodotto(String nome, String marca, BigDecimal prezzo, BigDecimal iva) {
+        Random rand = new Random();
+        this.codice = rand.nextInt(99999);
         this.nome = nome;
         this.marca = marca;
         this.prezzo = prezzo;
@@ -56,5 +58,10 @@ public class Prodotto {
 
     public void setIva(BigDecimal iva) {
         this.iva = iva;
+    }
+
+    
+    public BigDecimal prezzoScontatoFedelta(){
+        return this.prezzo.subtract(this.prezzo.multiply(new BigDecimal(2)).divide(new BigDecimal(100)));
     }
 }
