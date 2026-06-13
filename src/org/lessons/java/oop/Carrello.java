@@ -9,8 +9,25 @@ public class Carrello {
 
         System.out.println("Stai inserendo uno Smartphone, Televisore o Cuffie?");
         String productTipology = in.nextLine();
-        System.out.println("Hai una carta fedelta?");
-        boolean isFedelityCard = in.nextBoolean();
+
+        boolean isFedelityCard = false;
+        
+        while (true) {
+            System.out.println("Hai una carta fedelta?");
+            String fidelityCard = in.nextLine();
+
+            if (fidelityCard.toLowerCase().equals("si")) {
+                isFedelityCard = true;
+                break;
+            } else if (fidelityCard.toLowerCase().equals("no")) {
+                isFedelityCard = false;
+                break;
+            } else {
+                System.out.println("hai sbagliato a scrivere, mi serve 'si' o 'no' ");
+            }
+        }
+
+        in.close();
 
         if (productTipology.toLowerCase().equals("smartphone")) {
             Smartphone smartphone = new Smartphone(240, "Galaxy 15", "Samsung", new BigDecimal(400.99),
