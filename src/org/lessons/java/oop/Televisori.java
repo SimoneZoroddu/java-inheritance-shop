@@ -30,7 +30,7 @@ public class Televisori extends Prodotto {
 
     @Override
     public String toString() {
-        return String.format("Ecco la tua TV nel carrello: %s Marca: %s  Pollici: %d Prezzo: %s ", this.nome,
+        return String.format("Ecco la tua TV nel carrello: %s\n Marca: %s\n  Pollici: %d\n Prezzo: %s ", this.nome,
                 this.marca, this.pollici, this.prezzo.setScale(2, java.math.RoundingMode.HALF_UP));
     }
 

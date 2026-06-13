@@ -30,7 +30,7 @@ public class Cuffie extends Prodotto {
 
     @Override
     public String toString() {
-        return String.format("Ecco le tue cuffie nel carrello: %s Marca: %s  Colore: %s Prezzo: %s ", this.nome, this.marca, this.colore, this.prezzo.setScale(2, java.math.RoundingMode.HALF_UP));
+        return String.format("Ecco le tue cuffie nel carrello: %s\n Marca: %s\n  Colore: %s\n Prezzo: %s ", this.nome, this.marca, this.colore, this.prezzo.setScale(2, java.math.RoundingMode.HALF_UP));
     }
 
     @Override

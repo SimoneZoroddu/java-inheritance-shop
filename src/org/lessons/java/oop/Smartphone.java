@@ -32,7 +32,7 @@ public class Smartphone extends Prodotto {
 
     @Override
     public String toString(){
-        return String.format("Ecco il tuo Smarthpone nel carrello: %s Marca: %s  Memoria: %d IMEI: %d Prezzo: %s  ", this.nome, this.marca,this.memoria, this.IMEI, this.prezzo.setScale(2, java.math.RoundingMode.HALF_UP));
+        return String.format("Ecco il tuo Smarthpone nel carrello %s\n Marca: %s\n Memoria: %d\n IMEI: %d\n Prezzo: %s  ", this.nome, this.marca,this.memoria, this.IMEI, this.prezzo.setScale(2, java.math.RoundingMode.HALF_UP));
     }
 
     @Override
